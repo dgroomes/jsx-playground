@@ -3,6 +3,7 @@
 
 // Use classic JSX pragmas so TypeScript's compiler emits calls to our custom factory instead of React.
 import { myCreateElement, Fragment, myRender } from './jsx-runtime.js';
+import { writeFileSync } from 'fs';
 
 const snacks = ['grapes', 'cheese', 'olives'];
 
@@ -33,4 +34,18 @@ const documentTree = (
   </>
 );
 
-console.log(myRender(documentTree));
+const html = myRender(documentTree);
+const fullHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSX Rendered Output</title>
+</head>
+<body>
+${html}
+</body>
+</html>`;
+
+writeFileSync('output.html', fullHtml);
+console.log('HTML written to output.html');

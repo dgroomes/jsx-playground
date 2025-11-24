@@ -30,16 +30,21 @@ Follow these instructions to run the program:
    * ```shell
      npm start
      ```
-   * The program prints an HTML string to stdout
+   * The program generates `output.html`
+4. Open the HTML file in your browser
+   * ```shell
+     open output.html
+     ```
+   * Or open it manually in your preferred browser
 
 
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
 
-- [ ] IN PROGRESS Create project
+- [x] DONE Create project
    - DONE Scaffold/vision (GPT 5.1 codex max). But it doesn't actually work!
-   - Fix (Sonnet 4.5)
+   - DONE Fix (Sonnet 4.5)
 - [ ] AI slop clean up (although the content is really close)
    - Rewrite some of the prose.
    - package.json no scripts

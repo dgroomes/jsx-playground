@@ -20,6 +20,8 @@ export function myCreateElement(type, props, ...children) {
 export function myRender(node) {
   if (typeof node === 'string') return node;
   if (typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(myRender).join('');
+  if (!node || typeof node !== 'object') return '';
 
   const safeChildren = (node.children ?? []).filter(
     (child) => child !== null && child !== undefined && child !== false && child !== true
@@ -29,7 +31,7 @@ export function myRender(node) {
 
   if (node.type === Fragment) return renderedChildren;
 
-  const attrs = Object.entries(node.props)
+  const attrs = Object.entries(node.props ?? {})
     .map(([key, value]) => ` ${key}="${value}"`)
     .join('');
 
