@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react",
+    "jsxFactory": "myCreateElement",
+    "jsxFragmentFactory": "Fragment",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["main.jsx", "jsx-runtime.js"]
+}
