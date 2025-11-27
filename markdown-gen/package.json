@@ -1,0 +1,13 @@
+{
+  "name": "markdown-gen",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "mdast-util-to-markdown": "2.1.2"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.3",
+    "@types/mdast": "4.0.4"
+  }
+}

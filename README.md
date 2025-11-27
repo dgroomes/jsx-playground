@@ -30,9 +30,16 @@ Render HTML from JSX with a tiny runtime.
 See the README in [basic/](basic/).
 
 
+## `markdown-gen/`
+
+Generate Markdown from JSX using a custom Markdown-aware renderer.
+
+See the README in [markdown-gen/](markdown-gen/).
+
+
 ## Wish List
 
 General clean-ups, todos and things I wish to implement for this project:
 
-- [ ] IN PROGRESS Scaffold and `basic/` subproject.
-- [ ] Incorporate the Markdown-from-JSX subproject currently living in `react-playground/static-markdown-gen`
+- [ ] PARTIAL Scaffold and `basic/` subproject.
+- [x] DONE Incorporate the Markdown-from-JSX subproject currently living in `react-playground/static-markdown-gen`
